@@ -1,0 +1,20 @@
+[package]
+name = "embedded-graphics-ux"
+version = "0.1.0"
+license = "Apache-2.0"
+edition = "2024"
+
+[dependencies]
+embedded-graphics = "*"
+embedded-layout = "*"
+
+[dev-dependencies]
+# example support
+embedded-graphics-simulator = { version = "*", default-features = false, features = ["with-sdl"] }
+
+[features]
+# support both std and no_std environments
+std = []
+
+# example support - specialized display types
+binary_color = []   # simulation using a binary color display
